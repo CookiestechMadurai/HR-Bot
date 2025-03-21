@@ -390,6 +390,103 @@ export const questionBank = {
         keyPoints: ["shallow comparison", "performance optimization", "immutability importance", "React.memo equivalent", "potential pitfalls"]
       }
     ],
+    "C": [
+        {
+          "question": "What are the key features of the C language?",
+          "answer": "C is a general-purpose, procedural programming language known for its efficiency and portability. It provides low-level memory access, structured programming, and a rich set of built-in operators. C is widely used in system programming, embedded systems, and application development.",
+          "keyPoints": ["general-purpose", "procedural", "efficient", "portable", "low-level memory access"]
+        },
+        {
+          "question": "What is the difference between ‘=’ and ‘==’ operators in C?",
+          "answer": "The '=' operator is an assignment operator used to assign a value to a variable, whereas '==' is a comparison operator used to check if two values are equal. The '==' operator returns true (1) if the values are equal, otherwise false (0).",
+          "keyPoints": ["assignment operator", "comparison operator", "boolean result", "value assignment"]
+        },
+        {
+          "question": "What are pointers in C?",
+          "answer": "A pointer in C is a variable that stores the memory address of another variable. It allows efficient memory manipulation and dynamic memory allocation. Pointers are widely used for arrays, functions, and structures.",
+          "keyPoints": ["memory address", "efficient memory access", "dynamic allocation", "arrays", "functions"]
+        },
+        {
+          "question": "What is the difference between malloc() and calloc() in C?",
+          "answer": "Both malloc() and calloc() are used for dynamic memory allocation. malloc(size) allocates a block of memory but does not initialize it, whereas calloc(n, size) allocates and initializes the memory to zero.",
+          "keyPoints": ["dynamic memory allocation", "malloc()", "calloc()", "initialization", "memory management"]
+        },
+        {
+          "question": "What is the purpose of the ‘sizeof’ operator in C?",
+          "answer": "The 'sizeof' operator in C is used to determine the size of a data type or variable in bytes. It is useful for memory allocation and portability across different platforms.",
+          "keyPoints": ["memory size", "data type", "variable size", "portability", "dynamic memory allocation"]
+        },
+        {
+          "question": "What is a structure in C?",
+          "answer": "A structure in C is a user-defined data type that groups different data types under a single name. It helps organize complex data, making it useful in handling related information like records.",
+          "keyPoints": ["user-defined data type", "grouping variables", "records", "complex data handling"]
+        },
+        {
+          "question": "What is the difference between an array and a pointer?",
+          "answer": "An array is a fixed-size collection of elements of the same type stored in contiguous memory, whereas a pointer is a variable that stores a memory address. Arrays have a fixed size, while pointers can dynamically reference memory locations.",
+          "keyPoints": ["fixed size", "contiguous memory", "memory address", "dynamic referencing", "data storage"]
+        },
+        {
+          "question": "What are storage classes in C?",
+          "answer": "Storage classes in C define the scope, lifetime, and visibility of variables. The main storage classes are auto, extern, static, and register.",
+          "keyPoints": ["variable scope", "lifetime", "auto", "extern", "static", "register"]
+        },
+        {
+          "question": "What is recursion in C?",
+          "answer": "Recursion is a programming technique where a function calls itself to solve a problem. It is commonly used for tasks like factorial calculation and Fibonacci series generation.",
+          "keyPoints": ["function calling itself", "base case", "recursive case", "stack memory", "factorial", "Fibonacci"]
+        },
+        {
+          "question": "What is the difference between pass-by-value and pass-by-reference?",
+          "answer": "In pass-by-value, a copy of the argument is passed to a function, meaning changes do not affect the original variable. In pass-by-reference, the actual memory address is passed, allowing modifications to reflect in the original variable.",
+          "keyPoints": ["copy vs reference", "memory address", "original value", "modifications", "function arguments"]
+        },
+        {
+          "question": "What are the types of loops in C?",
+          "answer": "C supports three types of loops: for loop, while loop, and do-while loop. Loops are used to execute a block of code multiple times based on a condition.",
+          "keyPoints": ["for loop", "while loop", "do-while loop", "iteration", "loop condition"]
+        },
+        {
+          "question": "What is the difference between break and continue statements?",
+          "answer": "The break statement terminates a loop immediately, while the continue statement skips the current iteration and proceeds to the next loop iteration.",
+          "keyPoints": ["loop termination", "skip iteration", "break", "continue", "control flow"]
+        },
+        {
+          "question": "What is a function pointer in C?",
+          "answer": "A function pointer is a pointer that stores the address of a function. It allows dynamic function calls and is useful in callback mechanisms and implementing polymorphism in C.",
+          "keyPoints": ["function address", "dynamic function calls", "callbacks", "polymorphism", "pointer to function"]
+        },
+        {
+          "question": "What is the use of the ‘volatile’ keyword in C?",
+          "answer": "The volatile keyword tells the compiler that a variable can change unexpectedly, preventing optimizations that assume the variable remains unchanged. It is mainly used in embedded systems and multi-threading.",
+          "keyPoints": ["compiler optimization", "unexpected changes", "embedded systems", "multi-threading", "hardware interaction"]
+        },
+        {
+          "question": "What is a preprocessor directive in C?",
+          "answer": "Preprocessor directives are commands that provide instructions to the compiler before actual compilation begins. Common directives include #define, #include, #ifdef, and #pragma.",
+          "keyPoints": ["compiler instructions", "macros", "#define", "#include", "#ifdef", "#pragma"]
+        },
+        {
+          "question": "What is a memory leak in C and how can it be prevented?",
+          "answer": "A memory leak occurs when dynamically allocated memory is not freed, leading to wastage of resources. It can be prevented by using free() after malloc()/calloc() and using memory management tools like Valgrind.",
+          "keyPoints": ["memory allocation", "free()", "resource wastage", "Valgrind", "proper deallocation"]
+        },
+        {
+          "question": "What is the difference between stack and heap memory?",
+          "answer": "Stack memory is used for storing local variables and function calls, following the Last In First Out (LIFO) principle. Heap memory is used for dynamic memory allocation and provides more flexibility but requires manual management.",
+          "keyPoints": ["LIFO", "local variables", "dynamic memory", "manual management", "allocation and deallocation"]
+        },
+        {
+          "question": "How do you handle errors in C?",
+          "answer": "Error handling in C can be done using return codes, errno, perror(), and assert(). Proper error handling prevents unexpected program crashes and ensures robustness.",
+          "keyPoints": ["error codes", "errno", "perror()", "assert()", "program stability"]
+        },
+        {
+          "question": "What is the use of the static keyword in C?",
+          "answer": "The static keyword in C is used to define variables with persistent storage duration. It helps retain values between function calls and restricts scope in the case of static local variables.",
+          "keyPoints": ["persistent storage", "scope limitation", "static local variables", "static global variables"]
+        }
+      ],    
     'Full Stack': [
       {
         question: "What modules or technologies do you typically use in full stack development?",
@@ -467,6 +564,469 @@ export const questionBank = {
         keyPoints: ["CI/CD platforms", "pipeline stages", "testing integration", "deployment strategies", "containerization"]
       }
     ],
+    "HTML": [
+        {
+          "question": "What is HTML?",
+          "answer": "HTML (HyperText Markup Language) is the standard language for creating web pages. It uses tags to define the structure of a webpage, including headings, paragraphs, images, links, and more.",
+          "keyPoints": ["HyperText Markup Language", "web page structure", "tags", "headings", "links", "images"]
+        },
+        {
+          "question": "What is the difference between HTML and HTML5?",
+          "answer": "HTML5 is the latest version of HTML, introducing new elements like <article>, <section>, <nav>, and <video>. It also supports offline storage, multimedia elements, and better form controls.",
+          "keyPoints": ["HTML5", "new elements", "multimedia support", "offline storage", "better form controls"]
+        },
+        {
+          "question": "What are HTML tags?",
+          "answer": "HTML tags are keywords enclosed in angle brackets (<>), defining the structure and elements of a webpage. Examples include <p> for paragraphs and <a> for links.",
+          "keyPoints": ["angle brackets", "structure", "elements", "paragraphs", "links"]
+        },
+        {
+          "question": "What is the difference between block-level and inline elements?",
+          "answer": "Block-level elements take up the full width available, starting on a new line (e.g., <div>, <p>, <h1>). Inline elements only take up as much space as necessary and do not start on a new line (e.g., <span>, <a>, <strong>).",
+          "keyPoints": ["block-level", "inline", "full width", "new line", "examples"]
+        },
+        {
+          "question": "What is the role of the <!DOCTYPE> declaration in HTML?",
+          "answer": "The <!DOCTYPE> declaration defines the document type and version of HTML being used, ensuring proper rendering by web browsers.",
+          "keyPoints": ["document type", "HTML version", "proper rendering", "browser compatibility"]
+        },
+        {
+          "question": "What is the difference between <div> and <span> in HTML?",
+          "answer": "<div> is a block-level element used for structuring content, whereas <span> is an inline element used for styling specific parts of text or content.",
+          "keyPoints": ["block-level", "inline", "layout structuring", "styling", "container elements"]
+        },
+        {
+          "question": "What is semantic HTML?",
+          "answer": "Semantic HTML uses meaningful tags like <header>, <article>, and <footer> to improve readability and SEO instead of generic <div> tags.",
+          "keyPoints": ["meaningful tags", "SEO", "accessibility", "readability", "improved structure"]
+        },
+        {
+          "question": "What are the different types of lists in HTML?",
+          "answer": "HTML supports three types of lists: ordered lists (<ol>), unordered lists (<ul>), and definition lists (<dl>). Ordered lists use numbers, unordered lists use bullet points, and definition lists use terms with descriptions.",
+          "keyPoints": ["ordered list", "unordered list", "definition list", "list items", "numbering", "bullets"]
+        },
+        {
+          "question": "What are HTML attributes?",
+          "answer": "HTML attributes provide additional information about an element. Examples include 'href' in <a href=''>, 'src' in <img src=''>, and 'alt' in <img alt=''>.",
+          "keyPoints": ["additional information", "href", "src", "alt", "modifies behavior"]
+        },
+        {
+          "question": "What is the purpose of the <meta> tag in HTML?",
+          "answer": "The <meta> tag provides metadata about an HTML document, such as character encoding, viewport settings, and SEO-related keywords.",
+          "keyPoints": ["metadata", "character encoding", "viewport settings", "SEO", "keywords"]
+        },
+        {
+          "question": "How do you create a hyperlink in HTML?",
+          "answer": "You can create a hyperlink using the <a> tag with the 'href' attribute. Example: <a href='https://example.com'>Click Here</a>.",
+          "keyPoints": ["<a> tag", "href attribute", "external links", "internal links", "navigation"]
+        },
+        {
+          "question": "What is the difference between relative and absolute URLs?",
+          "answer": "Relative URLs reference a file relative to the current location, while absolute URLs specify the complete web address (e.g., 'https://example.com').",
+          "keyPoints": ["relative URL", "absolute URL", "current location", "full path", "navigation"]
+        },
+        {
+          "question": "How do you insert an image in HTML?",
+          "answer": "You can insert an image using the <img> tag with the 'src' attribute. Example: <img src='image.jpg' alt='Description'>.",
+          "keyPoints": ["<img> tag", "src attribute", "alt attribute", "image embedding"]
+        },
+        {
+          "question": "What is the purpose of the <form> tag in HTML?",
+          "answer": "The <form> tag is used to collect user input. It contains form elements like text fields, checkboxes, and buttons, and sends data to a server.",
+          "keyPoints": ["user input", "text fields", "buttons", "server communication", "form elements"]
+        },
+        {
+          "question": "What is the difference between GET and POST methods in an HTML form?",
+          "answer": "GET sends data in the URL and is used for retrieving data, while POST sends data in the request body, making it more secure for sensitive information.",
+          "keyPoints": ["data transmission", "GET method", "POST method", "URL parameters", "security"]
+        },
+        {
+          "question": "What is the purpose of the <iframe> tag in HTML?",
+          "answer": "The <iframe> tag is used to embed another webpage inside the current page. It is commonly used for embedding maps, videos, or external content.",
+          "keyPoints": ["embed webpage", "maps", "videos", "external content", "iframe"]
+        },
+        {
+          "question": "How do you create a table in HTML?",
+          "answer": "You can create a table using the <table> tag, with rows (<tr>) and columns (<td> for data and <th> for headers).",
+          "keyPoints": ["<table>", "<tr>", "<td>", "<th>", "rows", "columns"]
+        },
+        {
+          "question": "What are HTML5 multimedia elements?",
+          "answer": "HTML5 introduces <audio> and <video> elements for embedding sound and video content without requiring third-party plugins.",
+          "keyPoints": ["HTML5", "audio", "video", "multimedia", "no plugins required"]
+        },
+        {
+          "question": "What is the difference between the <b> and <strong> tags?",
+          "answer": "The <b> tag makes text bold without adding emphasis, while <strong> indicates important text with semantic meaning.",
+          "keyPoints": ["bold text", "semantic meaning", "important content", "visual vs meaning"]
+        },
+        {
+          "question": "What is the difference between the <i> and <em> tags?",
+          "answer": "The <i> tag displays text in italics for styling purposes, while <em> adds emphasis with semantic meaning.",
+          "keyPoints": ["italic text", "semantic meaning", "emphasis", "visual styling"]
+        }
+      ],
+        "CSS": [
+          {
+            "question": "What is CSS?",
+            "answer": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a web page, including layout, colors, and fonts.",
+            "keyPoints": ["Cascading Style Sheets", "presentation", "layout", "colors", "fonts"]
+          },
+          {
+            "question": "What are the different types of CSS?",
+            "answer": "CSS can be applied in three ways: Inline CSS (inside HTML elements), Internal CSS (inside a <style> tag within the <head>), and External CSS (linked through a .css file).",
+            "keyPoints": ["Inline CSS", "Internal CSS", "External CSS", "style application", "separation of concerns"]
+          },
+          {
+            "question": "What is the difference between relative, absolute, and fixed positioning in CSS?",
+            "answer": "Relative positioning moves an element relative to its normal position, absolute removes it from the flow and positions it relative to its nearest positioned ancestor, and fixed positions it relative to the viewport.",
+            "keyPoints": ["relative", "absolute", "fixed", "positioning", "layout control"]
+          },
+          {
+            "question": "What is the difference between id and class in CSS?",
+            "answer": "An id is unique and can only be used once per page, while a class can be used for multiple elements.",
+            "keyPoints": ["id", "class", "unique identifier", "multiple elements", "selectors"]
+          },
+          {
+            "question": "What are pseudo-classes in CSS?",
+            "answer": "Pseudo-classes define special states of an element, such as :hover (when the mouse is over an element) or :first-child (selecting the first child of an element).",
+            "keyPoints": ["pseudo-class", ":hover", ":first-child", "element state", "CSS selectors"]
+          },
+          {
+            "question": "What are pseudo-elements in CSS?",
+            "answer": "Pseudo-elements allow you to style specific parts of an element, such as ::before and ::after, which insert content before or after an element.",
+            "keyPoints": ["pseudo-elements", "::before", "::after", "styling parts", "content insertion"]
+          },
+          {
+            "question": "What is the difference between em, rem, and px in CSS?",
+            "answer": "px is an absolute unit, em is relative to the parent element’s font size, and rem is relative to the root element’s font size.",
+            "keyPoints": ["px", "em", "rem", "absolute vs relative", "responsive design"]
+          },
+          {
+            "question": "What is Flexbox in CSS?",
+            "answer": "Flexbox is a layout model that allows easy alignment, spacing, and positioning of elements in a container using properties like justify-content and align-items.",
+            "keyPoints": ["Flexbox", "layout model", "justify-content", "align-items", "responsive design"]
+          },
+          {
+            "question": "What is the difference between Flexbox and Grid in CSS?",
+            "answer": "Flexbox is a one-dimensional layout system (row or column), while CSS Grid is a two-dimensional system (rows and columns).",
+            "keyPoints": ["Flexbox", "Grid", "1D vs 2D", "rows", "columns"]
+          },
+          {
+            "question": "What is the z-index property in CSS?",
+            "answer": "The z-index property controls the stack order of overlapping elements, with higher values appearing above lower values.",
+            "keyPoints": ["z-index", "stack order", "overlapping elements", "layering"]
+          },
+          {
+            "question": "What are media queries in CSS?",
+            "answer": "Media queries allow the application of different styles based on screen size or device type, making websites responsive.",
+            "keyPoints": ["media queries", "responsive design", "screen size", "device adaptation"]
+          },
+          {
+            "question": "What is the difference between min-width and max-width in CSS?",
+            "answer": "min-width sets the minimum width an element can have, while max-width sets the maximum width it can reach.",
+            "keyPoints": ["min-width", "max-width", "responsive design", "CSS properties"]
+          },
+          {
+            "question": "What is the difference between visibility: hidden and display: none?",
+            "answer": "visibility: hidden hides an element but still occupies space, while display: none removes it completely from the document flow.",
+            "keyPoints": ["visibility: hidden", "display: none", "CSS visibility", "document flow"]
+          },
+          {
+            "question": "What is the difference between RGB, RGBA, HEX, and HSL color models in CSS?",
+            "answer": "RGB uses red, green, and blue values; RGBA adds an alpha (transparency) value; HEX represents colors in hexadecimal; and HSL uses hue, saturation, and lightness.",
+            "keyPoints": ["RGB", "RGBA", "HEX", "HSL", "color representation"]
+          },
+          {
+            "question": "What is the difference between relative and absolute units in CSS?",
+            "answer": "Relative units (%, em, rem, vw, vh) adjust based on the parent or viewport, while absolute units (px, cm, mm) remain constant.",
+            "keyPoints": ["relative units", "absolute units", "responsive design", "px vs em"]
+          },
+          {
+            "question": "What is the difference between inline, block, and inline-block elements in CSS?",
+            "answer": "Inline elements do not start on a new line and only take up as much space as needed, block elements take up the full width, and inline-block elements behave like inline but allow setting width and height.",
+            "keyPoints": ["inline", "block", "inline-block", "layout behavior"]
+          },
+          {
+            "question": "What is the difference between opacity and rgba() in CSS?",
+            "answer": "opacity controls the transparency of an entire element, while rgba() allows transparency control for just the background color.",
+            "keyPoints": ["opacity", "rgba()", "transparency", "background color"]
+          },
+          {
+            "question": "What is the box model in CSS?",
+            "answer": "The box model consists of margins, borders, padding, and content, defining how elements are displayed and spaced on a webpage.",
+            "keyPoints": ["box model", "margin", "border", "padding", "content"]
+          },
+          {
+            "question": "What is the difference between float and position in CSS?",
+            "answer": "Float is used to wrap text around an element, while position controls an element’s placement relative to other elements or the viewport.",
+            "keyPoints": ["float", "position", "layout control", "text wrapping"]
+          },
+          {
+            "question": "What is the difference between a relative URL and an absolute URL in CSS?",
+            "answer": "A relative URL points to a file within the same website, while an absolute URL includes the full web address.",
+            "keyPoints": ["relative URL", "absolute URL", "file path", "external resources"]
+          },
+          {
+            "question": "What are animations in CSS?",
+            "answer": "CSS animations allow elements to transition between styles over time using keyframes and properties like animation-name and animation-duration.",
+            "keyPoints": ["CSS animations", "@keyframes", "animation-name", "animation-duration"]
+          },
+          {
+            "question": "What is the difference between transition and animation in CSS?",
+            "answer": "Transitions apply smooth changes to properties when an event occurs, while animations allow more complex movements with keyframes.",
+            "keyPoints": ["transition", "animation", "smooth changes", "keyframes"]
+          },
+          {
+            "question": "What is the difference between the :nth-child and :nth-of-type selectors in CSS?",
+            "answer": ":nth-child selects elements based on position within the parent, while :nth-of-type selects elements based on their type.",
+            "keyPoints": [":nth-child", ":nth-of-type", "CSS selectors", "element targeting"]
+          }
+        ],
+        "Java": [
+            {
+              "question": "What is Java?",
+              "answer": "Java is a high-level, object-oriented programming language that is platform-independent and follows the principle of 'Write Once, Run Anywhere' (WORA).",
+              "keyPoints": ["Java", "object-oriented", "platform-independent", "WORA", "high-level language"]
+            },
+            {
+              "question": "What are the main features of Java?",
+              "answer": "Java features include platform independence, object-oriented programming, robustness, security, multithreading, and automatic memory management via garbage collection.",
+              "keyPoints": ["platform independence", "OOP", "robustness", "security", "multithreading", "garbage collection"]
+            },
+            {
+              "question": "What is the difference between JDK, JRE, and JVM?",
+              "answer": "JDK (Java Development Kit) includes the tools for developing Java applications, JRE (Java Runtime Environment) is required to run Java applications, and JVM (Java Virtual Machine) is responsible for executing Java bytecode.",
+              "keyPoints": ["JDK", "JRE", "JVM", "bytecode execution", "Java runtime"]
+            },
+            {
+              "question": "What is the difference between a class and an object in Java?",
+              "answer": "A class is a blueprint or template that defines attributes and methods, while an object is an instance of a class that holds actual data.",
+              "keyPoints": ["class", "object", "blueprint", "instance", "OOP concept"]
+            },
+            {
+              "question": "What are the access modifiers in Java?",
+              "answer": "Java provides four access modifiers: public (accessible everywhere), private (accessible within the same class), protected (accessible in the same package and subclasses), and default (accessible within the same package).",
+              "keyPoints": ["public", "private", "protected", "default", "access control"]
+            },
+            {
+              "question": "What is method overloading and method overriding in Java?",
+              "answer": "Method overloading occurs when multiple methods in the same class have the same name but different parameters. Method overriding occurs when a subclass provides a specific implementation of a method that exists in the parent class.",
+              "keyPoints": ["method overloading", "method overriding", "polymorphism", "inheritance"]
+            },
+            {
+              "question": "What is the difference between static and non-static methods in Java?",
+              "answer": "Static methods belong to the class and can be called without creating an object, while non-static methods require an instance of the class to be called.",
+              "keyPoints": ["static method", "non-static method", "class-level", "instance-level"]
+            },
+            {
+              "question": "What is a constructor in Java?",
+              "answer": "A constructor is a special method used to initialize an object. It has the same name as the class and does not have a return type.",
+              "keyPoints": ["constructor", "initialization", "same name as class", "no return type"]
+            },
+            {
+              "question": "What is the difference between an abstract class and an interface in Java?",
+              "answer": "An abstract class can have both abstract and concrete methods, while an interface only contains abstract methods (before Java 8). A class can implement multiple interfaces but can extend only one abstract class.",
+              "keyPoints": ["abstract class", "interface", "multiple inheritance", "OOP principles"]
+            },
+            {
+              "question": "What is encapsulation in Java?",
+              "answer": "Encapsulation is the practice of wrapping data and methods within a single unit (class) and restricting direct access to the internal data through access modifiers.",
+              "keyPoints": ["encapsulation", "data hiding", "access modifiers", "OOP concept"]
+            },
+            {
+              "question": "What is inheritance in Java?",
+              "answer": "Inheritance allows a class to acquire properties and methods from another class using the 'extends' keyword, promoting code reusability.",
+              "keyPoints": ["inheritance", "extends", "code reusability", "parent-child relationship"]
+            },
+            {
+              "question": "What is polymorphism in Java?",
+              "answer": "Polymorphism allows a single interface to be used for different types, enabling method overloading and method overriding.",
+              "keyPoints": ["polymorphism", "method overloading", "method overriding", "OOP feature"]
+            },
+            {
+              "question": "What is the difference between '=='' and '.equals()' in Java?",
+              "answer": "'==' checks for reference equality, meaning whether two references point to the same object, while '.equals()' checks for value equality.",
+              "keyPoints": ["==", ".equals()", "reference comparison", "value comparison"]
+            },
+            {
+              "question": "What is exception handling in Java?",
+              "answer": "Exception handling in Java is done using try, catch, finally, throw, and throws keywords to handle runtime errors gracefully.",
+              "keyPoints": ["exception handling", "try-catch", "throw", "throws", "finally"]
+            },
+            {
+              "question": "What is multithreading in Java?",
+              "answer": "Multithreading allows concurrent execution of two or more threads to improve performance. It is implemented using the Thread class or Runnable interface.",
+              "keyPoints": ["multithreading", "Thread class", "Runnable interface", "parallel execution"]
+            },
+            {
+              "question": "What is synchronization in Java?",
+              "answer": "Synchronization is the process of controlling multiple threads' access to shared resources to prevent data inconsistency.",
+              "keyPoints": ["synchronization", "thread safety", "concurrency control"]
+            },
+            {
+              "question": "What is a lambda expression in Java?",
+              "answer": "A lambda expression is a concise way to represent an anonymous function, introduced in Java 8 to simplify functional programming.",
+              "keyPoints": ["lambda expression", "Java 8", "functional programming", "anonymous function"]
+            },
+            {
+              "question": "What is the Stream API in Java?",
+              "answer": "The Stream API, introduced in Java 8, allows functional-style operations on collections, such as filtering, mapping, and reducing.",
+              "keyPoints": ["Stream API", "functional programming", "Java 8", "collection processing"]
+            },
+            {
+              "question": "What is garbage collection in Java?",
+              "answer": "Garbage collection is the automatic process of reclaiming memory occupied by objects that are no longer in use.",
+              "keyPoints": ["garbage collection", "automatic memory management", "JVM"]
+            },
+            {
+              "question": "What is the difference between HashMap and HashTable?",
+              "answer": "HashMap is not synchronized and allows null keys, while HashTable is synchronized and does not allow null keys or values.",
+              "keyPoints": ["HashMap", "HashTable", "synchronization", "null values"]
+            },
+            {
+              "question": "What is the difference between ArrayList and LinkedList?",
+              "answer": "ArrayList uses a dynamic array and provides fast access, while LinkedList uses a doubly linked list and provides faster insertions and deletions.",
+              "keyPoints": ["ArrayList", "LinkedList", "dynamic array", "doubly linked list"]
+            },
+            {
+              "question": "What is the difference between final, finally, and finalize in Java?",
+              "answer": "final is used to declare constants or prevent method/ class overriding, finally is used in exception handling, and finalize is a method called before garbage collection.",
+              "keyPoints": ["final", "finally", "finalize", "garbage collection", "exception handling"]
+            },
+            {
+              "question": "What is the main() method in Java?",
+              "answer": "The main() method is the entry point of a Java application and must be defined as public static void main(String[] args).",
+              "keyPoints": ["main method", "entry point", "public static void main"]
+            }
+          ],
+          "C++": [
+              {
+                "question": "What is C++?",
+                "answer": "C++ is a high-level, object-oriented programming language that extends C with features like classes, inheritance, and polymorphism.",
+                "keyPoints": ["C++", "object-oriented", "C extension", "high-level language"]
+              },
+              {
+                "question": "What are the main features of C++?",
+                "answer": "C++ features include object-oriented programming, low-level memory manipulation, polymorphism, encapsulation, and generic programming.",
+                "keyPoints": ["OOP", "low-level manipulation", "polymorphism", "encapsulation", "generic programming"]
+              },
+              {
+                "question": "What is the difference between C and C++?",
+                "answer": "C is a procedural programming language, while C++ supports both procedural and object-oriented programming paradigms.",
+                "keyPoints": ["C", "C++", "procedural", "object-oriented", "multi-paradigm"]
+              },
+              {
+                "question": "What is an object in C++?",
+                "answer": "An object is an instance of a class that holds data and methods to manipulate that data.",
+                "keyPoints": ["object", "class instance", "OOP"]
+              },
+              {
+                "question": "What are access specifiers in C++?",
+                "answer": "C++ provides three access specifiers: public (accessible anywhere), private (accessible within the class), and protected (accessible in derived classes).",
+                "keyPoints": ["public", "private", "protected", "access control"]
+              },
+              {
+                "question": "What is function overloading in C++?",
+                "answer": "Function overloading allows multiple functions with the same name but different parameters to exist within the same scope.",
+                "keyPoints": ["function overloading", "polymorphism", "multiple signatures"]
+              },
+              {
+                "question": "What is operator overloading in C++?",
+                "answer": "Operator overloading allows operators to have user-defined meanings for different data types.",
+                "keyPoints": ["operator overloading", "polymorphism", "custom operators"]
+              },
+              {
+                "question": "What is a constructor in C++?",
+                "answer": "A constructor is a special member function used to initialize objects when they are created.",
+                "keyPoints": ["constructor", "initialization", "special member function"]
+              },
+              {
+                "question": "What is the difference between deep copy and shallow copy?",
+                "answer": "A shallow copy duplicates only memory references, while a deep copy creates a completely independent copy of the original object.",
+                "keyPoints": ["shallow copy", "deep copy", "memory allocation"]
+              },
+              {
+                "question": "What is inheritance in C++?",
+                "answer": "Inheritance allows a derived class to inherit members and methods from a base class, promoting code reusability.",
+                "keyPoints": ["inheritance", "base class", "derived class", "code reusability"]
+              },
+              {
+                "question": "What is polymorphism in C++?",
+                "answer": "Polymorphism enables a single interface to be used for different data types, including function overloading and method overriding.",
+                "keyPoints": ["polymorphism", "function overloading", "method overriding"]
+              },
+              {
+                "question": "What is the difference between compile-time and runtime polymorphism?",
+                "answer": "Compile-time polymorphism is achieved using function overloading and templates, while runtime polymorphism is achieved using virtual functions.",
+                "keyPoints": ["compile-time polymorphism", "runtime polymorphism", "overloading", "virtual functions"]
+              },
+              {
+                "question": "What is an abstract class in C++?",
+                "answer": "An abstract class is a class that cannot be instantiated and must have at least one pure virtual function.",
+                "keyPoints": ["abstract class", "pure virtual function", "OOP"]
+              },
+              {
+                "question": "What is a virtual function in C++?",
+                "answer": "A virtual function is a function in the base class that can be overridden in derived classes to achieve dynamic polymorphism.",
+                "keyPoints": ["virtual function", "dynamic binding", "overriding"]
+              },
+              {
+                "question": "What is a friend function in C++?",
+                "answer": "A friend function is a non-member function that has access to the private and protected members of a class.",
+                "keyPoints": ["friend function", "non-member access", "encapsulation"]
+              },
+              {
+                "question": "What is exception handling in C++?",
+                "answer": "Exception handling is the process of managing runtime errors using try, catch, and throw blocks.",
+                "keyPoints": ["exception handling", "try-catch", "throw"]
+              },
+              {
+                "question": "What are templates in C++?",
+                "answer": "Templates allow writing generic and reusable code that can work with any data type.",
+                "keyPoints": ["templates", "generic programming", "code reuse"]
+              },
+              {
+                "question": "What is the Standard Template Library (STL) in C++?",
+                "answer": "STL is a library of generic classes and functions that provide data structures like vectors, lists, and maps.",
+                "keyPoints": ["STL", "generic classes", "data structures", "algorithms"]
+              },
+              {
+                "question": "What is the difference between stack and heap memory in C++?",
+                "answer": "Stack memory is used for static allocation, while heap memory is used for dynamic allocation.",
+                "keyPoints": ["stack", "heap", "memory allocation", "dynamic vs static"]
+              },
+              {
+                "question": "What is memory leakage in C++?",
+                "answer": "Memory leakage occurs when dynamically allocated memory is not deallocated, leading to wasted memory resources.",
+                "keyPoints": ["memory leak", "dynamic allocation", "delete"]
+              },
+              {
+                "question": "What is the difference between new and malloc in C++?",
+                "answer": "The 'new' operator initializes objects and calls constructors, while 'malloc' only allocates raw memory without initialization.",
+                "keyPoints": ["new", "malloc", "constructor", "dynamic allocation"]
+              },
+              {
+                "question": "What is a namespace in C++?",
+                "answer": "A namespace is used to avoid name conflicts by grouping related functions, classes, and variables.",
+                "keyPoints": ["namespace", "name conflict", "modular programming"]
+              },
+              {
+                "question": "What is RAII (Resource Acquisition Is Initialization) in C++?",
+                "answer": "RAII is a programming idiom where resource allocation is tied to object lifetime, ensuring automatic resource management.",
+                "keyPoints": ["RAII", "automatic resource management", "memory safety"]
+              },
+              {
+                "question": "What is multithreading in C++?",
+                "answer": "Multithreading allows parallel execution of tasks using multiple threads to improve performance.",
+                "keyPoints": ["multithreading", "parallel execution", "thread safety"]
+              },
+              {
+                "question": "What is the difference between a struct and a class in C++?",
+                "answer": "A struct has public members by default, while a class has private members by default.",
+                "keyPoints": ["struct", "class", "default access modifier"]
+              }
+            ],                            
     'Default': [
       {
         question: "What are the different types of encryption techniques?",
