@@ -194,17 +194,13 @@
         <div class="sidebar-menu">
             <div class="sidebar-item">Overview</div>
             <div class="sidebar-item active">Try This</div>
-            <div class="sidebar-item">Settings</div>
+            <div class="sidebar-item">Documentation</div>
         </div>
     </div>
     
     <!-- Main Content -->
     <div class="main-content">
-        <div class="navbar">
-            <div class="nav-item">Documentation</div>
-            <div class="nav-item">Pricing</div>
-            <div class="nav-item">Profile</div>
-        </div>
+        
         
         <div class="content">
             <h1>Interview Practice Bots</h1>
@@ -224,20 +220,6 @@
                     <p>Prepare for business school and management position interviews with questions on leadership, strategy, and case analysis.</p>
                     <a href="mba1.html" class="try-button">Try MBA Bot</a>
                 </div>
-                
-                <div class="interview-card">
-                    <div class="interview-icon">🎭</div>
-                    <h3>Arts Interview Bot</h3>
-                    <p>Practice interviews for creative and liberal arts positions with questions on portfolio, creative process, and theoretical frameworks.</p>
-                    <a href="arts-interview.html" class="try-button">Try Arts Bot</a>
-                </div>
-                
-                <div class="interview-card">
-                    <div class="interview-icon">📈</div>
-                    <h3>B.Com Interview Bot</h3>
-                    <p>Get ready for commerce and finance interviews with questions on accounting principles, finance fundamentals, and market analysis.</p>
-                    <a href="bcom-interview.html" class="try-button">Try B.Com Bot</a>
-                </div>
             </div>
         </div>
     </div>
@@ -252,10 +234,10 @@
                 const page = this.textContent.trim();
                 if (page === 'Try This') {
                     window.location.href = 'trythis.html';
-                } else if (page === 'Settings') {
-                    window.location.href = 'settings.html';
                 }else if (page === 'Overview') {
                     window.location.href = 'index.html';
+                }else if (page === 'Documentation') {
+                    window.location.href = 'documentation.html';
                 }
             });
         });
@@ -266,10 +248,6 @@
                 const page = this.textContent.trim();
                 if (page === 'Documentation') {
                     window.location.href = 'documentation.html';
-                } else if (page === 'Pricing') {
-                    window.location.href = 'pricing.html';
-                }else if (page === 'Profile') {
-                    window.location.href = 'profile.html';
                 }
             });
         });
