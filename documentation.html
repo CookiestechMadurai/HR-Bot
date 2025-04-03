@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6343948689807963"
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MockVox Platform - Documentation</title>
@@ -280,22 +282,16 @@
         <div class="sidebar-menu">
             <div class="sidebar-item">Overview</div>
             <div class="sidebar-item">Try This</div>
-            <div class="sidebar-item">Settings</div>
+            <div class="sidebar-item active">Documentation</div>
         </div>
     </div>
     
     <!-- Main Content -->
     <div class="main-content">
-        <div class="navbar">
-            <div class="nav-item">Documentation</div>
-            <div class="nav-item">Pricing</div>
-            <div class="nav-item">Profile</div>
-        </div>
+        
         
         <div class="content">
             <h1>MockVox Documentation</h1>
-            
-            
             
             <div class="section">
                 <h2>Interview Virtual Partner</h2>
@@ -385,18 +381,6 @@
                         <p>Prepare for business school and management position interviews with questions on leadership, strategy, and case analysis.</p>
                         <a href="#" class="btn">Try MBA Bot</a>
                     </div>
-                    
-                    <div class="bot-card">
-                        <h3><strong>Arts Interview Bot</strong> 🎭</h3>
-                        <p>Practice interviews for creative and liberal arts positions with questions on portfolio, creative process, and theoretical frameworks.</p>
-                        <a href="#" class="btn">Try Arts Bot</a>
-                    </div>
-                    
-                    <div class="bot-card">
-                        <h3><strong>B.Com Interview Bot</strong> 📈</h3>
-                        <p>Get ready for commerce and finance interviews with questions on accounting principles, finance fundamentals, and market analysis.</p>
-                        <a href="#" class="btn">Try B.Com Bot</a>
-                    </div>
                 </div>
             </div>
             
@@ -450,6 +434,7 @@
                     background-color: #0d8c6d;
                 }
             </style>
+            
             <div class="section">
                 <h2>Preparing for Your Virtual Interview</h2>
                 <p>To get the most out of your MockVox interview experience, we recommend:</p>
@@ -533,27 +518,13 @@
                     window.location.href = 'index.html';
                 } else if (page === 'Try This') {
                     window.location.href = 'trythis.html';
-                } else if (page === 'Settings') {
-                    window.location.href = 'settings.html';
-                }else if (page === 'Documentation') {
+                } else if (page === 'Documentation') {
                     window.location.href = 'documentation.html';
                 }
             });
         });
 
-        // Navbar Navigation
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const page = this.textContent.trim();
-                if (page === 'Documentation') {
-                    window.location.href = 'documentation.html';
-                } else if (page === 'Pricing') {
-                    window.location.href = 'pricing.html';
-                } else if (page === 'Profile') {
-                    window.location.href = 'profile.html';
-                }
-            });
-        });
+        
         
         // Documentation navigation
         document.querySelectorAll('.doc-nav-item').forEach(item => {
