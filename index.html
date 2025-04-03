@@ -168,18 +168,14 @@
     <div class="sidebar-menu">
         <div class="sidebar-item active">Overview</div>
         <div class="sidebar-item">Try This</div>
-        <div class="sidebar-item">Settings</div>
+        <div class="sidebar-item">Documentation</div>
     </div>
 </div>
 
     
     <!-- Main Content -->
     <div class="main-content">
-        <div class="navbar">
-            <div class="nav-item">Documentation</div>
-            <div class="nav-item">Pricing</div>
-            <div class="nav-item">Profile</div>
-        </div>
+        
         
         <div class="content">
             <h1>Welcome to MockVox Platform</h1>
@@ -218,27 +214,15 @@
                 const page = this.textContent.trim();
                 if (page === 'Try This') {
                     window.location.href = 'trythis.html';
-                } else if (page === 'Settings') {
-                    window.location.href = 'settings.html';
-                } else if (page === 'Overview') {
+                }else if (page === 'Overview') {
                     window.location.href = 'index.html';
+                }else if (page === 'Documentation') {
+                    window.location.href = 'documentation.html';
                 }
             });
         });
     
-        // ✅ Navbar Navigation (Including API Page)
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const page = this.textContent.trim();
-                if (page === 'Documentation') {
-                    window.location.href = 'documentation.html';
-                } else if (page === 'Pricing') {
-                    window.location.href = 'pricing.html';
-                }else if (page === 'Profile') {
-                    window.location.href = 'profile.html';
-                }
-            });
-        });
+        
     
         // ✅ Try button redirects to index.html
         document.querySelector('.try-button').addEventListener('click', function(e) {
