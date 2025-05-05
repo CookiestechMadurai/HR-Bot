@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6343948689807963"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoapp - About Us</title>
+    <style>
+        :root {
+            --primary-color: #10a37f;
+            --secondary-color: #f7f7f7;
+            --text-color: #353740;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            border-bottom: 1px solid #e5e5e5;
+            background-color: #ffffff;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-text {
+            font-weight: 600;
+            font-size: 22px;
+            color: var(--text-color);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-item {
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        
+        .nav-item:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-item.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            transition: color 0.3s ease;
+        }
+        
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            font-weight: 600;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin: 20px 0 10px;
+            font-weight: 500;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        /* Buttons */
+        .try-button, .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .try-button:hover, .btn:hover {
+            background-color: #0c8968;
+            transform: scale(1.05);
+        }
+        
+        /* Team Section */
+        .team-section {
+            margin: 40px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .team-card {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 20px;
+        }
+        
+        .team-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .team-bio {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px 0;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        /* Value Cards */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .value-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+        }
+        
+        .footer p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 20px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="tuto1.jpg" alt="Tutoapp Logo" class="logo-img"> 
+            <div class="logo-text">Tutoapp</div>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="guide.html" class="nav-item">Guide</a>
+            <a href="about.html" class="nav-item active">About Us</a>
+            <a href="contact.html" class="nav-item">Contact Us</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content">
+            <h1>About Tutoapp</h1>
+            <p>We're revolutionizing the way job seekers prepare for interviews through AI-powered mock interview experiences that provide personalized feedback and actionable insights.</p>
+            
+            <div class="mission-section">
+                <h2>Our Mission</h2>
+                <p>At Tutoapp, we believe everyone deserves the opportunity to present their best self during job interviews. Our mission is to democratize interview preparation by providing accessible, personalized, and effective practice tools that help candidates build confidence and showcase their true potential.</p>
+            </div>
+            
+            <h2>Our Story</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>The Idea</h3>
+                        <p>Tutoapp was born from a simple observation: despite having incredible skills, many talented individuals struggle to communicate effectively during interviews. Our founders experienced this firsthand while mentoring computer science graduates.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3>Development & Beta Testing</h3>
+                        <p>We assembled a team of AI researchers, educational experts, and HR professionals to develop our first interview bot prototype. After months of training on thousands of real interview scenarios and feedback from beta testers, we refined our algorithms.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Early 2025</div>
+                        <h3>Official Launch</h3>
+                        <p>Tutoapp platform was officially launched with two specialized interview bots focusing on Computer Science and MBA candidates. Within the first three months, we helped over 50,000 users improve their interview performance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Present</div>
+                        <h3>Growing & Evolving</h3>
+                        <p>Today, we're expanding our bot offerings to cover more industries and roles while continuously improving our algorithms to provide even more accurate and helpful feedback to our growing community.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-title">Accessibility</div>
+                    <p>We believe quality interview preparation should be available to everyone, regardless of background or resources.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-title">Innovation</div>
+                    <p>We constantly push the boundaries of AI technology to create more realistic and helpful interview experiences.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-title">Empowerment</div>
+                    <p>We focus on building confidence and skills that extend beyond specific interviews to entire careers.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-title">Integrity</div>
+                    <p>We're committed to providing honest feedback and protecting user privacy and data at all times.</p>
+                </div>
+            </div>
+            
+            <h2>Meet Our Team</h2>
+            <p>Tutoapp is built by a diverse team of technologists, educators, and design thinkers passionate about helping people succeed in their careers.</p>
+            
+            <div class="team-section">
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="/api/placeholder/300/300" alt="Sarah Chen" class="team-img">
+                        <div class="team-info">
+                            <div class="team-name">Sarah Chen</div>
+                            <div class="team-role">Co-Founder & CEO</div>
+                            <p class="team-bio">Former tech recruiting leader with 10+ years experience at top tech companies. Sarah combines her HR expertise with a passion for educational technology.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <img src="/api/placeholder/300/300" alt="Raj Patel" class="team-img">
+                        <div class="team-info">
+                            <div class="team-name">Raj Patel</div>
+                            <div class="team-role">Co-Founder & CTO</div>
+                            <p class="team-bio">AI researcher with a PhD in Natural Language Processing from Stanford. Raj leads our technical development and algorithm design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <img src="/api/placeholder/300/300" alt="Elena Rodriguez" class="team-img">
+                        <div class="team-info">
+                            <div class="team-name">Elena Rodriguez</div>
+                            <div class="team-role">Head of Education</div>
+                            <p class="team-bio">Former career counselor with expertise in educational psychology. Elena ensures our feedback mechanisms drive genuine learning and improvement.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <img src="/api/placeholder/300/300" alt="David Kim" class="team-img">
+                        <div class="team-info">
+                            <div class="team-name">David Kim</div>
+                            <div class="team-role">Lead UX Designer</div>
+                            <p class="team-bio">Human-computer interaction specialist focusing on creating intuitive and engaging learning experiences that keep users motivated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Start Your Interview Preparation Today</h2>
+            <p>Join thousands of job seekers who have improved their interview performance with Tutoapp.</p>
+            <a href="trythis.html" class="btn">Try Your First Interview</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Tutoapp. All rights reserved.</p>
+    </div>
+    
+    <script>
+        // Button redirects to trythis.html
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'trythis.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MockVox Platform - Documentation</title>
+    <style>
+        :root {
+            --primary-color: #10a37f;
+            --secondary-color: #f7f7f7;
+            --text-color: #353740;
+            --sidebar-width: 250px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+        
+        /* Sidebar styles */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: #f9f9f9;
+            padding: 20px 0;
+            border-right: 1px solid #e5e5e5;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .logo {
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        
+        .sidebar-menu {
+            margin-top: 20px;
+        }
+        
+        .sidebar-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        
+        .sidebar-item:hover {
+            background-color: #e9e9e9;
+        }
+        
+        .sidebar-item.active {
+            background-color: #e0f7f1;
+            border-right: 3px solid var(--primary-color);
+        }
+        
+        /* Main content styles */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .navbar {
+            height: 64px;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 20px;
+        }
+        
+        .nav-item {
+            margin-left: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            font-weight: 600;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin: 20px 0 10px;
+            font-weight: 500;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            color: #444;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .feature-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .doc-nav {
+            display: flex;
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .doc-nav-item {
+            margin-right: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+        
+        .doc-nav-item:hover {
+            color: var(--primary-color);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            margin: 20px 0;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+        
+        .metrics-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .metric-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .steps-container {
+            counter-reset: step-counter;
+            margin: 30px 0;
+        }
+        
+        .step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 25px;
+        }
+        
+        .step:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .step h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="mockvox1.png" alt="MockVox Logo" class="logo-img"> 
+            <div class="logo-text">MockVox</div>
+        </div>
+        <div class="sidebar-menu">
+            <div class="sidebar-item">Overview</div>
+            <div class="sidebar-item">Try This</div>
+            <div class="sidebar-item">Settings</div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="navbar">
+            <div class="nav-item">Documentation</div>
+            <div class="nav-item">Pricing</div>
+            <div class="nav-item">Profile</div>
+        </div>
+        
+        <div class="content">
+            <h1>MockVox Documentation</h1>
+            
+            
+            
+            <div class="section">
+                <h2>Interview Virtual Partner</h2>
+                <p>
+                    MockVox Interview Virtual Partner is an AI-powered interview simulation tool designed to help candidates prepare for technical and general interviews across various industries. The system provides realistic interview experiences with customizable interview bots, resume analysis, and comprehensive performance reports.
+                </p>
+                
+                <div class="feature-card">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Multiple Interview Bot Options:</strong> Select from a variety of specialized interview bots tailored to different roles and industries</li>
+                        <li><strong>Resume Upload & Analysis:</strong> Upload your resume for personalized interview questions aligned with your experience</li>
+                        <li><strong>8-Minute Interview Format:</strong> Experience compact yet comprehensive interviews covering technical and general questions</li>
+                        <li><strong>Coding Quizzes:</strong> Practice real-time coding challenges similar to those used in technical interviews</li>
+                        <li><strong>Comprehensive Performance Reports:</strong> Receive detailed feedback on your communication, grammar, technical knowledge, and coding skills</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>How It Works</h2>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <h3>Select an Interview Bot</h3>
+                        <p>Browse and select from a range of specialized interview bots tailored to specific roles (e.g., Frontend Developer, Data Scientist, DevOps Engineer) or companies. Each bot is trained with industry-specific knowledge and typical interview patterns.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Upload Your Resume</h3>
+                        <p>Upload your resume in PDF, DOCX, or TXT format. MockVox will analyze your experience, skills, and background to generate personalized interview questions relevant to your professional history.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Complete the Interview</h3>
+                        <p>Participate in an 8-minute interview session that includes:</p>
+                        <ul>
+                            <li>Introduction and background questions</li>
+                            <li>Technical knowledge assessment</li>
+                            <li>Role-specific scenario questions</li>
+                            <li>Interactive coding challenges (for technical roles)</li>
+                            <li>Behavioral and soft skill questions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Review Your Performance Report</h3>
+                        <p>After completing the interview, MockVox generates a comprehensive performance report with metrics and feedback on:</p>
+                        
+                        <div class="metrics-container">
+                            <div class="metric-card">
+                                <div class="metric-title">Communication Score</div>
+                                <p>Assessment of clarity, conciseness, and effectiveness of your responses</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-title">Grammar & Language</div>
+                                <p>Evaluation of your language proficiency, vocabulary, and grammatical accuracy</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-title">Technical Competency</div>
+                                <p>Rating of your technical knowledge and problem-solving capabilities</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-title">Coding Skills</div>
+                                <p>Analysis of your coding approach, solution quality, and efficiency</p>
+                            </div>
+                        </div>
+                        
+                        <p>Each report includes actionable feedback and suggestions for improvement to help you perform better in actual interviews.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Available Interview Bots</h2>
+                <p>MockVox offers specialized interview bots for different academic backgrounds and career paths:</p>
+                
+                <div class="bot-container">
+                    <div class="bot-card">
+                        <h3><strong>CSE Interview Bot</strong> 💻</h3>
+                        <p>Practice technical interviews for Computer Science & Engineering positions with questions on algorithms, data structures, and system design.</p>
+                        <a href="#" class="btn">Try CSE Bot</a>
+                    </div>
+                    
+                    <div class="bot-card">
+                        <h3><strong>MBA Interview Bot</strong> 📊</h3>
+                        <p>Prepare for business school and management position interviews with questions on leadership, strategy, and case analysis.</p>
+                        <a href="#" class="btn">Try MBA Bot</a>
+                    </div>
+                    
+                    <div class="bot-card">
+                        <h3><strong>Arts Interview Bot</strong> 🎭</h3>
+                        <p>Practice interviews for creative and liberal arts positions with questions on portfolio, creative process, and theoretical frameworks.</p>
+                        <a href="#" class="btn">Try Arts Bot</a>
+                    </div>
+                    
+                    <div class="bot-card">
+                        <h3><strong>B.Com Interview Bot</strong> 📈</h3>
+                        <p>Get ready for commerce and finance interviews with questions on accounting principles, finance fundamentals, and market analysis.</p>
+                        <a href="#" class="btn">Try B.Com Bot</a>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                .bot-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 20px;
+                    margin: 25px 0;
+                }
+                
+                .bot-card {
+                    background-color: #f9f9f9;
+                    border-radius: 8px;
+                    padding: 20px;
+                    border-left: 4px solid var(--primary-color);
+                    transition: transform 0.2s, box-shadow 0.2s;
+                }
+                
+                .bot-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                }
+                
+                .bot-card h3 {
+                    margin-top: 0;
+                    color: var(--primary-color);
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                
+                .bot-card p {
+                    margin-bottom: 15px;
+                    min-height: 80px;
+                }
+                
+                .bot-card .btn {
+                    margin-top: 5px;
+                    display: inline-block;
+                    padding: 8px 16px;
+                    background-color: var(--primary-color);
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    transition: background-color 0.2s;
+                }
+                
+                .bot-card .btn:hover {
+                    background-color: #0d8c6d;
+                }
+            </style>
+            <div class="section">
+                <h2>Preparing for Your Virtual Interview</h2>
+                <p>To get the most out of your MockVox interview experience, we recommend:</p>
+                
+                <ul>
+                    <li><strong>Update Your Resume:</strong> Ensure your uploaded resume accurately reflects your current skills and experience</li>
+                    <li><strong>Test Your Equipment:</strong> Check your microphone and camera before starting the interview</li>
+                    <li><strong>Find a Quiet Environment:</strong> Choose a distraction-free location for your interview session</li>
+                    <li><strong>Dress Professionally:</strong> Practice as you would perform - dress appropriately to get into the interview mindset</li>
+                    <li><strong>Be Prepared to Code:</strong> For technical roles, be ready to solve coding challenges in real-time</li>
+                    <li><strong>Allow Sufficient Time:</strong> Although the core interview is 8 minutes, allocate time to review your results and feedback</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Understanding Your Performance Report</h2>
+                <p>After completing your interview, MockVox generates a comprehensive report that includes:</p>
+                
+                <h3>Score Breakdown</h3>
+                <ul>
+                    <li><strong>Communication Score (0-100):</strong> Evaluates clarity, conciseness, and effectiveness of your responses</li>
+                    <li><strong>Grammar & Language (0-100):</strong> Assesses language proficiency, vocabulary usage, and grammatical accuracy</li>
+                    <li><strong>Technical Competency (0-100):</strong> Rates your domain knowledge, problem-solving approach, and technical accuracy</li>
+                    <li><strong>Coding Score (0-100):</strong> Analyzes code quality, efficiency, correctness, and approach to problem-solving</li>
+                    <li><strong>Overall Rating:</strong> A weighted average based on the role you're interviewing for</li>
+                </ul>
+                
+                <h3>Detailed Feedback</h3>
+                <p>Each report includes:</p>
+                <ul>
+                    <li>Specific strengths identified during your interview</li>
+                    <li>Areas for improvement with actionable suggestions</li>
+                    <li>Response analysis for key questions</li>
+                    <li>Code review with optimization suggestions (for technical roles)</li>
+                    <li>Comparative performance metrics against other candidates</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <h3>How accurate is the MockVox interview compared to real interviews?</h3>
+                <p>MockVox interviews are designed to closely simulate real-world interview experiences. Our bots are trained on thousands of actual interview questions and scenarios from leading companies. While no simulation can perfectly replicate a human interviewer, our users report high correlation between MockVox feedback and actual interview experiences.</p>
+                
+                <h3>Can I retake interviews?</h3>
+                <p>Yes, you can take as many interview sessions as you need, with the same or different interview bots. Each attempt generates a new set of questions based on your resume and previous performance.</p>
+                
+                <h3>Is my resume data secure?</h3>
+                <p>Absolutely. MockVox adheres to strict data privacy standards. Your resume is processed securely, and the information is only used to personalize your interview experience. We do not share your data with third parties.</p>
+                
+                <h3>How long does the entire process take?</h3>
+                <p>The core interview lasts 8 minutes. However, we recommend allocating about 20-30 minutes total to account for setup, the interview itself, and reviewing your feedback report.</p>
+                
+                <h3>Can I customize the interview focus areas?</h3>
+                <p>Yes, premium users can customize interview parameters to focus on specific technical areas or skills they want to practice.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Get Started</h2>
+                <p>Ready to improve your interview skills with MockVox?</p>
+                <a href="trythis.html" class="btn">Try Your First Interview</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple navigation script
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove active class from all items
+                document.querySelectorAll('.sidebar-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Navigation logic
+                const page = this.textContent.trim();
+                if (page === 'Overview') {
+                    window.location.href = 'index.html';
+                } else if (page === 'Try This') {
+                    window.location.href = 'trythis.html';
+                } else if (page === 'Settings') {
+                    window.location.href = 'settings.html';
+                }else if (page === 'Documentation') {
+                    window.location.href = 'documentation.html';
+                }
+            });
+        });
+
+        // Navbar Navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const page = this.textContent.trim();
+                if (page === 'Documentation') {
+                    window.location.href = 'documentation.html';
+                } else if (page === 'Pricing') {
+                    window.location.href = 'pricing.html';
+                } else if (page === 'Profile') {
+                    window.location.href = 'profile.html';
+                }
+            });
+        });
+        
+        // Documentation navigation
+        document.querySelectorAll('.doc-nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Logic to navigate between documentation sections
+            });
+        });
+    </script>
+</body>
+</html>
